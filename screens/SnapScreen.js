@@ -57,12 +57,7 @@ function SnapScreen(props) {
 
 			if (response.result === true) {
 				setVisible(false);
-				console.log('RESPONSE BELOW');
-				console.log(response.data);
 				props.storePicture(response.data);
-				console.log('BEFORE COPY');
-				console.log('props.pictures = ' + [props.pictures]);
-				console.log('BEFORE PUSH');
 				var picturesListCopy;
 				if (props.pictures === null) {
 					picturesListCopy = response.data;
@@ -70,7 +65,6 @@ function SnapScreen(props) {
 					picturesListCopy = props.pictures;
 					picturesListCopy.push(response.data);
 				}
-				console.log('AFTER PUSH');
 				AsyncStorage.setItem(
 					'storagePictures',
 					JSON.stringify(picturesListCopy)

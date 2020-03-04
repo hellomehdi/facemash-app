@@ -21,11 +21,8 @@ function GalleryScreen(props) {
 
 	// HOOK GET PICTURES FROM LOCAL STORAGE
 	useEffect(() => {
-		console.log('STARTING USEEFFECT');
 		AsyncStorage.getItem('storagePictures', function(error, storageData) {
-			console.log('ASYNC STORAGE GET :');
 			var storagePicturesData = JSON.parse(storageData);
-			console.log(picturesData);
 			setPicturesData(storagePicturesData);
 			props.storePicture(storagePicturesData);
 		});
@@ -56,11 +53,6 @@ function GalleryScreen(props) {
 		props.pictures !== undefined ||
 		props.pictures.length !== 0
 	) {
-		console.log('G props.pictures :');
-		console.log(props.pictures);
-		console.log('PICTURES DATA :');
-		console.log(picturesData);
-		console.log('type of props.pictures = ' + typeof props.pictures);
 		picturesList = props.pictures.map(function(item, i) {
 			return (
 				<Card

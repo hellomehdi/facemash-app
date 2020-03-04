@@ -2,14 +2,10 @@ export default function(pictures = [{}], action) {
 	var picturesCopy = [];
 
 	if (action.type == 'addPicture') {
-		console.log('RX PICTURES BEFORE = ' + pictures);
-		console.log('RX PICTURE TO ADD = ' + JSON.stringify(action.picture));
 		if (pictures !== undefined && pictures !== null) {
 			picturesCopy = [...pictures];
 		}
 		picturesCopy.push(action.picture);
-		console.log('RX REDUCER DONE');
-		console.log('RX PICTURES AFTER = ' + picturesCopy);
 		return picturesCopy;
 	} else if (action.type === 'setPictures') {
 		// picturesCopy = [action.pictures];
