@@ -1,16 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
 	StyleSheet,
-	ImageBackground,
 	Text,
 	View,
 	TouchableOpacity,
 	AsyncStorage
 } from 'react-native';
 
-import { Button, Overlay } from 'react-native-elements';
+import { Overlay } from 'react-native-elements';
 import { withNavigationFocus } from 'react-navigation';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import Toast from 'react-native-simple-toast';
 import { connect } from 'react-redux';

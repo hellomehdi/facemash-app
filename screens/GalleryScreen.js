@@ -1,19 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {
-	View,
-	ScrollView,
-	KeyboardAvoidingView,
-	AsyncStorage
-} from 'react-native';
-import {
-	Button,
-	ListItem,
-	Input,
-	Card,
-	Badge,
-	Text
-} from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { View, ScrollView, AsyncStorage } from 'react-native';
+import { Card, Badge, Text } from 'react-native-elements';
 import { connect } from 'react-redux';
 
 function GalleryScreen(props) {
